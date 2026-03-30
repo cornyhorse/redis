@@ -52,11 +52,13 @@ RUN set -eux; \
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
+        gosu \
         libssl3 \
         libsystemd0 \
         tzdata \
     ; \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*; \
+    gosu nobody true
 
 COPY --from=build /usr/local/bin/redis-server /usr/local/bin/
 COPY --from=build /usr/local/bin/redis-cli /usr/local/bin/
