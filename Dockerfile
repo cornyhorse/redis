@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
 # Build stage
-ARG REDIS_VERSION=7.4.2
-ARG REDIS_DOWNLOAD_SHA=4dea6fc8ab3e19e9e527dfb38ca6bd83b75a43f12e61ba4b7b00f6513d86e8b5
+ARG REDIS_VERSION=7.4.8
+ARG REDIS_DOWNLOAD_SHA=f6773cb7d63be236c59c2917a82f1f08e47b77d89b2f0c9f53becb22b8ea4172
 
 FROM debian:bookworm-slim AS build
 
